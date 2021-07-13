@@ -30,4 +30,14 @@ public class ArtistsServiceImpl implements ArtistsService {
     public List<Album> getAllAlbums() {
         return album.findAll();
     }
+
+    @Override
+    public void saveArtista(Artist art) {
+        artist.save(art);        
+    }
+
+    @Override
+    public void deleteArtist(Integer id) {
+        artist.deleteById(id);
+    }
 }
