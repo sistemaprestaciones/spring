@@ -3,27 +3,25 @@ package mx.gob.issste.Entities;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "artistas")
-@Table(name = "artistaz")
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Artists {
+public class Artist {
     
     @Id
-    @Column(name = "ArtistsId")
-    private Integer Id_artista;
-
+    @Column(name = "ArtistId")
+    private Integer id_artista;
+    
     @Column(name = "Name")
-    private String Nombre_cancion;
+    private String Nombre;
 
         
 }

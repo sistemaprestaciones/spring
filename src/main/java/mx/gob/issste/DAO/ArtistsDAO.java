@@ -1,15 +1,16 @@
 package mx.gob.issste.DAO;
 
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import mx.gob.issste.Entities.Artists;
+import mx.gob.issste.Entities.Artist;
+
 
 @Repository
-public interface ArtistsDAO extends CrudRepository<Artists, Integer> {
+public interface ArtistsDAO extends JpaRepository<Artist, Integer> {
 
-    @Query(value = "SELECT a FROM Artists a WHERE a.cancion = ?1 AND a.anio = ?2")
-    public Artists getArtistBySong(String cancion, Integer anio);
+    //Ejemplo de implementacion de consulta personalizada
+    // @Query(value = "SELECT a FROM Artists a WHERE a.cancion = ?1 AND a.anio = ?2")
+    // public Artists getArtistBySong(String cancion, Integer anio);
     
 }

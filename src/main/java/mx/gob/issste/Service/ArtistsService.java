@@ -1,9 +1,15 @@
 package mx.gob.issste.Service;
 
-import mx.gob.issste.Entities.Artists;
+import java.util.List;
+
+
+import mx.gob.issste.Entities.Album;
+import mx.gob.issste.Entities.Artist;
 
 public interface ArtistsService {
 
-    public Artists getAllArtist();
+    public List<Artist> getAllArtist();
+
+    public List<Album> getAllAlbums();
     
 }
